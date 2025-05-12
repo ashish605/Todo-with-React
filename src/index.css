@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  background-color: #F9ECD9;
+}
+
+.main1{
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.main1::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+.saved-text{
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.saved-text::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+@keyframes expandBoard {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .board {
+    animation: expandBoard 0.5s ease forwards !important;
+    width: 90vw !important;
+  }
+}
